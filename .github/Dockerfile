@@ -2,6 +2,7 @@ FROM golang:1.26.2
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -y install --no-install-recommends \
+        curl \
         jq && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/*
